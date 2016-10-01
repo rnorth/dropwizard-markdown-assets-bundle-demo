@@ -2,9 +2,8 @@ assets:
   googleTrackingId: ABC-123
 
 server:
-  applicationConnectors:
-    - type: http
-      port: 8080
-  adminConnectors:
-    - type: http
-      port: 8081
+  type: simple
+  applicationContextPath: /
+  connector:
+    type: http
+    port: 8080
