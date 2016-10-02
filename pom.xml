@@ -14,10 +14,16 @@
             <artifactId>dropwizard-core</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <!-- Use jitpack for demo, for faster turnaround on updates -->
+        <!--<dependency>-->
+            <!--<groupId>org.rnorth.dropwizard</groupId>-->
+            <!--<artifactId>dropwizard-markdown-assets-bundle</artifactId>-->
+            <!--<version>1.0.4</version>-->
+        <!--</dependency>-->
         <dependency>
-            <groupId>org.rnorth.dropwizard</groupId>
+            <groupId>com.github.rnorth</groupId>
             <artifactId>dropwizard-markdown-assets-bundle</artifactId>
-            <version>1.0.3</version>
+            <version>master</version>
         </dependency>
     </dependencies>
 
@@ -63,4 +69,12 @@
             </plugin>
         </plugins>
     </build>
+
+    <!-- Use jitpack for demo, for faster turnaround on updates -->
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 </project>
