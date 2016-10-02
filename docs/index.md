@@ -142,3 +142,29 @@ sequenceDiagram
     Bob-->Alice: Checking with John...
     Alice->John: Yes... John, how are you?
 ```
+
+### Inline HTML and JavaScript
+
+Yes, inline HTML and JavaScript are supported! Use it responsibly.
+
+Here's a `<div>`:
+
+<div id="buttonTarget" style="border: 1px solid #cce; padding: 1em;">Press the button</div>
+
+Here's a `<button>` with some associated inline JavaScript. A reference to a script file would also work, and is probably preferable:
+
+<button id="trigger">Press me</button>
+
+For reference the script content is:
+```javascript
+document.getElementById("trigger")
+        .addEventListener("click", function() {
+            document.getElementById("buttonTarget").innerHTML = "Button was pressed! It's " + new Date();
+        });
+```
+<script>
+document.getElementById("trigger")
+        .addEventListener("click", function() {
+            document.getElementById("buttonTarget").innerHTML = "Button was pressed! It's " + new Date();
+        });
+</script>
