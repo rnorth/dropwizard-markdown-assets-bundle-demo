@@ -5,25 +5,10 @@ This is a demo application for [dropwizard-markdown-assets-bundle](https://githu
 In real life this document could be used to describe what the application does, usage instructions, API docs etc.
 
 This demo just shows a few features of the bundle:
-
-> In the 'out of the box' configuration (with default template and stylesheet) the following additional features are supported:
-> 
-> * Fast, capable server-side markdown rendering using [flexmark-java](https://github.com/vsch/flexmark-java) (including Github Flavored Markdown):
->     * [Anchor links](https://github.com/vsch/flexmark-java/wiki/Extensions#anchorlink)
->     * [Autolink](https://github.com/vsch/flexmark-java/wiki/Extensions#autolink)
->     * [Footnotes](https://github.com/vsch/flexmark-java/wiki/Extensions#footnotes)
->     * [GFM Strikethrough](https://github.com/vsch/flexmark-java/wiki/Extensions#gfm-strikethrough)
->     * [GFM Task lists](https://github.com/vsch/flexmark-java/wiki/Extensions#gfm-tasklist)
->     * [GFM Tables](https://github.com/vsch/flexmark-java/wiki/Extensions#tables)
-> * [Generated tables of contents](https://github.com/vsch/flexmark-java/wiki/Extensions#table-of-contents-1)
-> * Optional rendering of diagrams using [Mermaid](https://knsv.github.io/mermaid/) in conjunction with fenced code blocks for graceful degradation:
->     * Graphs and flowcharts
->     * Sequence diagrams
->     * Gantt charts
-> * Optional code syntax highlighting using [highlight.js](https://highlightjs.org/)
-> * Optional analytics integration using Google Analytics
-> * A simple and (subjectively!) nice default stylesheet
-> * Ability to serve non-markdown static assets of any type, as well
+* markdown formatting
+* syntax highlighting
+* diagrams support
+* inline HTML and JS support
 
 ... See [the Github project repo](https://github.com/rnorth/dropwizard-markdown-assets-bundle) for full documentation.
 
@@ -31,7 +16,44 @@ This demo just shows a few features of the bundle:
 
 ### General markdown
 
+Standard *markdown* **formatting** __features__ for text are supported. So are [links](#) and autolinks (such as http://example.org).
+
+You can use:
+* bulleted
+* lists
+
+And:
+1. Numbered
+2. Lists
+
+> Blockquotes are supported
+
+As are a few GFM extras:
+
+* [x] Task
+* [ ] Lists
+* [ ] using `* [ ] syntax`
+
+And Markdown tables:
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 * See [Adam Pritchard's Markdown Cheatsheet](markdown-cheatsheet.md) rendered by this bundle.
+
+### Syntax highlighting
+
+This is some example code showing syntax highlighting:
+
+```java
+public interface MarkdownBundleConfiguration {
+
+    MarkdownAssetsConfiguration getMarkdownAssetsConfiguration();
+}
+```
 
 ### Diagrams
 
