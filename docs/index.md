@@ -4,13 +4,17 @@ This is a demo application for [dropwizard-markdown-assets-bundle](https://githu
 
 In real life this document could be used to describe what the application does, usage instructions, API docs etc.
 
+For example, if your dropwizard service exposes API endpoints under `/api/...`, then adding this bundle would allow you to serve up documentation under `/docs/` (or any other paths of your choosing). This demo shows presentation of documentation without actually exposing any useful API endpoints.
+
 This demo just shows a few features of the bundle:
 * markdown formatting
 * syntax highlighting
 * diagrams support
 * inline HTML and JS support
 
-... See [the Github project repo](https://github.com/rnorth/dropwizard-markdown-assets-bundle) for full documentation.
+See [the Github project repo](https://github.com/rnorth/dropwizard-markdown-assets-bundle) for full documentation for the bundle.
+
+The [Github repo for this demo](https://github.com/rnorth/dropwizard-markdown-assets-bundle-demo) shows how it can be used in practice.
 
 ## Demo content
 
